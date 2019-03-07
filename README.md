@@ -4,6 +4,7 @@
 
 - [`docker-tools`](https://github.com/splo/docker-tools)
 - [`git-tools`](https://github.com/splo/git-tools)
+- [`macos-tools`](https://github.com/splo/macos-tools)
 
 ## Usage
 
@@ -11,5 +12,5 @@
 # Add tap
 brew tap splo/tap
 # Install the tools
-brew install docker-tools git-tools
+brew install docker-tools git-tools macos-tools
 ```
