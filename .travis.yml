@@ -1,0 +1,16 @@
+language: minimal
+
+os: osx
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - stage: test
+      name: audit
+      script: brew audit ./Formula/*.rb
+    - stage: test
+      name: test
+      script: brew install ./Formula/*.rb && brew test ./Formula/*.rb
