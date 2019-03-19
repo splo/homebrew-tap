@@ -10,7 +10,7 @@ jobs:
   include:
     - stage: test
       name: audit
-      script: brew audit ./Formula/*.rb
+      script: brew audit --strict --online ./Formula/*.rb
     - stage: test
       name: test
-      script: brew install ./Formula/*.rb && brew test ./Formula/*.rb
+      script: HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew install --display-times --include-test ./Formula/*.rb && brew test ./Formula/*.rb
