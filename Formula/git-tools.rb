@@ -8,4 +8,8 @@ class GitTools < Formula
   def install
     bin.install "bin/git-delete-merged-branches"
   end
+
+  test do
+    assert_match "/usr/local/bin/git-delete-merged-branches", shell_output("which git-delete-merged-branches")
+  end
 end

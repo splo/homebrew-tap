@@ -14,4 +14,10 @@ class MacosTools < Formula
     bin.install "bin/delete-dsstores"
     bin.install "bin/flush-cache"
   end
+
+  test do
+    assert_match "/usr/local/bin/bluetooth-ctl", shell_output("which bluetooth-ctl")
+    assert_match "/usr/local/bin/delete-dsstores", shell_output("which delete-dsstores")
+    assert_match "/usr/local/bin/flush-cache", shell_output("which flush-cache")
+  end
 end
