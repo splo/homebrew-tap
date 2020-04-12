@@ -2,16 +2,16 @@
 class DockerBrennen < Formula
   desc "Cleanup unused Docker resources."
   homepage "https://github.com/splo/docker-brennen/"
-  version "0.1.0"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/splo/docker-brennen/releases/download/v0.1.0/docker-brennen_0.1.0_darwin_amd64.tar.gz"
-    sha256 "40744c37ee1cbffebeb72c27f7904db495594cbcbfe4473c0a119b386f7a3f3d"
+    url "https://github.com/splo/docker-brennen/releases/download/v0.2.0/docker-brennen_0.2.0_darwin_amd64.tar.gz"
+    sha256 "414c933fa30e322bb701aec7ba797e18c78c0813279e9a581813c89086c05723"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.1.0/docker-brennen_0.1.0_linux_amd64.tar.gz"
-      sha256 "8b2b666f9f6a816ab01526f4d5c4ce7f92cf7a12ddd4a2ce1b62ef844f8d9d2f"
+      url "https://github.com/splo/docker-brennen/releases/download/v0.2.0/docker-brennen_0.2.0_linux_amd64.tar.gz"
+      sha256 "0850511086353a4b9fc17d86696efffe45ab2ca3701d9e96ffaaad90e510d068"
     end
   end
   
