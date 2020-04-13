@@ -1,8 +1,8 @@
 class DockerTools < Formula
   desc "Docker-related tools"
   homepage "https://github.com/splo/docker-tools"
-  url "https://github.com/splo/docker-tools/archive/v1.0.0.tar.gz"
-  sha256 "0957dfbb25da6aa7cca286b05aa1242313372ee57017956038370f8edc4717a5"
+  url "https://github.com/splo/docker-tools/archive/v1.1.0.tar.gz"
+  sha256 "282e1b2822a2d5ec4b33f0daf5b501600544f3a053dc14076c08d4151677d636"
   head "https://github.com/splo/docker-tools.git"
 
   def install
