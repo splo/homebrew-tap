@@ -5,22 +5,22 @@
 class DockerBrennen < Formula
   desc "Cleanup unused Docker resources."
   homepage "https://github.com/splo/docker-brennen/"
-  version "0.3.0"
+  version "0.3.1"
 
-  depends_on "docker"
+  depends_on "docker" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.0/docker-brennen_0.3.0_darwin_amd64.tar.gz"
-      sha256 "a294b42f9dd454f7863e0ca13b7fa326cdff26ec25f42118fb79174cc67a9721"
+    if Hardware::CPU.arm?
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_darwin_arm64.tar.gz"
+      sha256 "235b03b06bdae40aca83a45c1ffb0b3909f681eed4febd977f119f7de3d8f948"
 
       def install
         bin.install "docker-brennen"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.0/docker-brennen_0.3.0_darwin_arm64.tar.gz"
-      sha256 "7ad72adbfa11956daa5ce4cc10360357f6e29ac5718dc4c57334db466082dd42"
+    if Hardware::CPU.intel?
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_darwin_amd64.tar.gz"
+      sha256 "04b09aafe9b4360607a2bf4a912598765efa055b52dea8a7bd58d77c5e7998d5"
 
       def install
         bin.install "docker-brennen"
@@ -29,17 +29,17 @@ class DockerBrennen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.0/docker-brennen_0.3.0_linux_amd64.tar.gz"
-      sha256 "22d9b335ee36f29ac3ab3202b5e5bce6162a39bc4fc8b496ef2885aa29d51cb0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_linux_arm64.tar.gz"
+      sha256 "23f18a919bcd87842aa5ae071be63f6a7da713492f50821c089025984e5f805b"
 
       def install
         bin.install "docker-brennen"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.0/docker-brennen_0.3.0_linux_arm64.tar.gz"
-      sha256 "9b78a54b038e1db30ab2166d93f786b683639bdacc047efe204fd62540a4339e"
+    if Hardware::CPU.intel?
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_linux_amd64.tar.gz"
+      sha256 "19ab997423710d6c0889cddcb5bfc292865e7a800afc3b01cccb6c4dc316c257"
 
       def install
         bin.install "docker-brennen"
@@ -48,6 +48,6 @@ class DockerBrennen < Formula
   end
 
   test do
-    assert_match "/usr/local/bin/docker-brennen", shell_output("which docker-brennen")
+    assert_match(/docker-brennen$/, shell_output("which docker-brennen"), "Not correctly installed")
   end
 end
