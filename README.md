@@ -7,7 +7,7 @@
 - [`docker-brennen`](https://github.com/splo/docker-brennen)
 - [`git-tools`](https://github.com/splo/git-tools)
 - [`macos-tools`](https://github.com/splo/macos-tools)
-<!--project_table_end -->
+<!-- project_table_end -->
 
 ## Usage
 
