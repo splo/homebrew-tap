@@ -9,7 +9,7 @@ class GitDeleteMergedBranches < Formula
   sha256 "77b2b8b43878b581d5face30ee1fc4c9bbbe1bcb255f272a868b8f6bdcc986b6"
   license "MIT"
 
-  depends_on '"git" => :optional'
+  depends_on "\"git\" => :optional"
 
   on_macos do
     on_intel do
@@ -31,10 +31,10 @@ class GitDeleteMergedBranches < Formula
   end
 
   def install
-    'bin.install 'git-delete-merged-branches''
+    "bin.install 'git-delete-merged-branches'"
   end
 
   test do
-    'assert_match(/git-delete-merged-branches$/, shell_output("which git-delete-merged-branches"), "Not correctly installed")'
+    assert_match(/git-delete-merged-branches$/, shell_output("which git-delete-merged-branches"), "Not correctly installed")
   end
 end

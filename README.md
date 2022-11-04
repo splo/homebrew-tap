@@ -10,8 +10,7 @@
 | [git-delete-merged-branches](https://github.com/splo/git-delete-merged-branches) | Delete branches present in local but deleted in remote | `brew install git-delete-merged-branches` |
 | [git-tools](https://github.com/splo/git-tools)                                   | Helpful Git tools                                      | `brew install git-tools`                  |
 | [macos-tools](https://github.com/splo/macos-tools)                               | Simple command-line utilities only usable on macOS     | `brew install macos-tools`                |
-<!-- project_table_end -->
-## Usage
+<!-- project_table_end -->## Usage
 
 ```bash
 # Add tap
