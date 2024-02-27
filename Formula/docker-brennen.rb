@@ -5,22 +5,22 @@
 class DockerBrennen < Formula
   desc "Cleanup unused Docker resources."
   homepage "https://github.com/splo/docker-brennen/"
-  version "0.3.1"
+  version "0.3.2"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_darwin_arm64.tar.gz"
-      sha256 "235b03b06bdae40aca83a45c1ffb0b3909f681eed4febd977f119f7de3d8f948"
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.2/docker-brennen_0.3.2_darwin_arm64.tar.gz"
+      sha256 "b7bc8d7d2b71a52f437fa537a1cdf77e813214e58a94fb28607aa58fb6fcd279"
 
       def install
         bin.install "docker-brennen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_darwin_amd64.tar.gz"
-      sha256 "04b09aafe9b4360607a2bf4a912598765efa055b52dea8a7bd58d77c5e7998d5"
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.2/docker-brennen_0.3.2_darwin_amd64.tar.gz"
+      sha256 "2ffef20d8285759889bd70b638160c5f28b9de3c495d8c2be975ddf1af9be556"
 
       def install
         bin.install "docker-brennen"
@@ -30,16 +30,16 @@ class DockerBrennen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_linux_arm64.tar.gz"
-      sha256 "23f18a919bcd87842aa5ae071be63f6a7da713492f50821c089025984e5f805b"
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.2/docker-brennen_0.3.2_linux_arm64.tar.gz"
+      sha256 "d366e741212a2af92c9237815878c393cd80feeb75d8812c3592df20e9900160"
 
       def install
         bin.install "docker-brennen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/splo/docker-brennen/releases/download/v0.3.1/docker-brennen_0.3.1_linux_amd64.tar.gz"
-      sha256 "19ab997423710d6c0889cddcb5bfc292865e7a800afc3b01cccb6c4dc316c257"
+      url "https://github.com/splo/docker-brennen/releases/download/v0.3.2/docker-brennen_0.3.2_linux_amd64.tar.gz"
+      sha256 "de7a26d1f1c4472b66a4972e9d7531d5679889213613481469045027bed016d1"
 
       def install
         bin.install "docker-brennen"
